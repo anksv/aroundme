@@ -4,7 +4,7 @@ from bson.objectid import ObjectId
 
 class databaseServices:
 
-    def saveEmpDetails(self,db_name, db_collection, request):
+    def savelocations(self,db_name, db_collection, request):
         connection = MongoConnector.get_connection(db_name, db_collection)
         connection.insert_one(request)
         response = {}
