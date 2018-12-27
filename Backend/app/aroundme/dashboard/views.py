@@ -18,6 +18,7 @@ cd = commonData()
 #     response = dbb.savelocations(cd.db_name,cd.db_collection,request_json)
 #     return HttpResponse(cd.convert_to_json(response))
 
+#we have to remove django coce as this data is getting inserted in sqlite
 @api_view(["POST"])
 def savelocations(request):
     serializer = LocationSerializer(data=request.data,many=True)
